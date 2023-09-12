@@ -1,0 +1,85 @@
+// VARIABLES 
+$color-primary:hsl(192, 100%, 9%);
+
+$color-pink: hsl(322, 100%, 66%);
+$color-pink--light:hsl(321, 100%, 78%);
+$color-red:hsl(0, 100%, 63%);
+
+$color-white:white; 
+$color-pale:hsl(207, 100%, 98%);
+
+// FONT-FAMILY 
+$font-family--heading:'Poppins', sans-serif;
+$font-family--body:'Open Sans', sans-serif;
+
+// MIXINS 
+@mixin rowflex($gap:1rem){
+    display: flex;
+    flex-direction: row;
+    gap: $gap;
+}
+@mixin colflex($gap:1rem){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+@mixin colrev($gap:1rem){
+    display: flex;
+    flex-direction: column-reverse;
+    gap: $gap;
+}
+
+// BOX SHADOW 
+$shadow:0 .005rem .1rem $color-primary;
+
+// QUICK ACCESS 
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+// MEDIA QUERY MANAGER 
+/*
+0-375px: frontend
+375-600px: phone
+600-900px:Tablet potrait
+900-1200px: Tablet landscape
+1200-1800: Its where our normal style apply
+1800px:Big desktop
+
+$breakpoint argument choices
+-frontend
+-phone
+-tab-port
+-tab-land
+-big-desktop
+*/
+
+@mixin response($breakpoint){
+    @if $breakpoint  == frontend {@media only screen and (max-width:375px){@content}}
+    @if $breakpoint == phone {@media only screen and (max-width:600px){@content}}
+    @if $breakpoint==tab-port {@media only screen and (max-width:900px){@content}}
+    @if $breakpoint==tab-land {@media only screen and (max-width:1200px){@content}}
+    @if $breakpoint==big-desktop {@media only screen and (max-width:1800px){@content}}
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;     //1rem =10px
+    @include response(tab-port){
+        font-size: 50%;
+    }
+}
+body{
+    width: 100vw; 
+   overflow-x: hidden;
+   background-color: $color-white;
+   font-family: $font-family--body;
+}

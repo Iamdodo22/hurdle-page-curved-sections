@@ -1,0 +1,27 @@
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 12px;
+    border-radius: 25px;
+    border: none;
+    font-size: 8px;
+    &-trans{
+        color: $color-pink--light;
+        border: 1px solid $color-pink--light;
+        background-color: white;
+        &--pink{
+            color: $color-pale;
+            background-color: $color-pink;
+            border-radius: 0;
+        }
+    }
+    &-pink{
+        background-color: $color-pink;
+        color: $color-white;
+        padding: 1.5rem 6rem;
+        box-shadow: $shadow;
+        &--small{
+            padding: 1.5rem 5rem;
+        }
+    }
+}

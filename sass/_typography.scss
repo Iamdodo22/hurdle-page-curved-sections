@@ -1,0 +1,235 @@
+.heading-primary{
+    color: $color-primary;
+    font-family: $font-family--heading;
+    font-weight: 900;
+    font-size: 20px;
+    text-align: center;
+}
+
+.paragraph-primary{
+    color: $color-primary;
+    line-height: 1.5rem;
+    width: 30%;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+    @include response(tab-port){
+        width: 33%;
+    }
+    @include response(phone){
+        width: 50%;
+    }
+}
+
+.stat{
+    width: 100vw;
+    @include rowflex;
+    justify-content: space-around;
+    @include response(frontend){
+        @include colflex($gap:8rem);
+        padding-block: 5rem;
+    }
+}
+
+.icon{
+    width: 2rem;
+}
+
+.heading-secondary{
+    color: $color-primary;
+    font-weight: 700;
+    font-size: 3rem;
+    @include response(phone){
+        font-size: 5rem;
+    }
+    @include response(frontend){
+        font-size: 5rem;
+    }
+    &--white{
+        color: $color-pale;
+    }
+}
+
+.paragraph-secondary{
+    font-size: 8px;
+    text-align: center;
+    color: rgba(128, 128, 128, 0.785);
+    @include response(phone){
+        font-size: 1.5rem;
+    }
+    @include response(frontend){
+        font-size: 1.5rem;
+    }
+}
+.grow{
+    width: 75%;
+    @include rowflex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    @include response(tab-land){
+        width: 80%; 
+    }
+    @include response(tab-port){
+        width: 80%;
+        padding-inline: 10rem;
+    }
+    @include response(phone){
+        @include colrev; 
+        align-items: center;
+    }
+    &-text{
+        width: 50%;
+        text-align: left;
+        @include response(phone){
+            width: 100%;
+            padding-top: 5rem;
+        }
+    }
+    &-img{
+        width: 50%;
+        @include response(phone){
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.flow{
+    width: 75%;
+    @include rowflex;
+    align-items: center;
+    margin-inline: auto;
+    @include response(tab-land){
+        width: 80%;
+    }
+    @include response(phone){
+        @include colflex; 
+    }
+    &-text{
+        width: 50%;
+        text-align: left;
+        @include response(phone){
+            width: 100%;
+            padding-top: 5rem;
+        }
+    }
+    &-img{
+        width: 50%;
+        @include response(phone){
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+    }
+}
+
+.users{
+    width: 75%;
+    @include rowflex;
+    align-items: center;
+    margin-inline: auto;
+    @include response(tab-land){
+        width: 80%;
+    }
+    @include response(tab-port){
+        width: 100%;
+        padding-inline: 10rem;
+    }
+    @include response(phone){
+        @include colrev; 
+    }
+    &-text{
+        width: 50%;
+        text-align: left;
+        @include response(phone){
+            width: 100%;
+            padding-top: 5rem;
+        }
+    }
+    &-img{
+        width: 50%;
+        @include response(phone){
+            padding-top: 5rem;
+            width: 100%;
+        }
+    }
+}
+
+.heading-tetriary{
+    font-size: 1.5rem;
+    @include response (phone){
+        text-align: center;
+    }
+}
+.paragraph-tetriary{
+    color: $color-primary;
+    padding-top: 1rem;
+    width: 100%;
+    font-size: 1.2rem;
+    @include response (phone){
+        text-align: center;
+    }
+}
+
+ul{
+    list-style: none;
+    @include colflex;
+    @include response (phone){
+        gap: 2rem;
+        &:nth-child(1){
+            padding-top: 5rem;
+        }
+    }
+    li{
+        &:nth-child(2){
+            width: 80%;
+            text-align: left;
+            @include response(phone){
+                line-height: 3rem;
+                font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+.logo-bottom{
+    width: 80%;
+    @include response(phone){
+        width: 50%
+        }
+    }
+
+.socials{
+    @include rowflex;
+    &-img{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    @include response(phone){
+        padding-bottom: 5rem;
+    }
+}
+
+.form{
+    @include rowflex($gap:1.5rem);
+    input{
+        width: 80%;
+        border-radius: 7px;
+        @include response(phone){
+            padding-block: 1.5rem;
+        }
+        
+    }
+    @include response(phone){
+        @include colflex;
+        width: 80%;
+        input{
+            width: 100%;
+        }
+        button{
+            align-self: flex-end;
+            padding: 1.5rem 6rem;
+            border-radius: 7px;
+        }
+    }
+}
