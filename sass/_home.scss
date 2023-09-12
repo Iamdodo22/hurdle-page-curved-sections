@@ -87,10 +87,8 @@
 }
 
 .footer{
-    display: inline-block;
     position: relative;
     margin-top: 3rem;
-    // padding:0 20%;
     padding-inline: 20%;
     @include colflex($gap:0);
     color: $color-pale;
@@ -98,6 +96,7 @@
     &-curvy{
         width: 100%;
         position: absolute;
+        padding: 0;
         top: 0;
         left: 0;
         background-color: $color-white;

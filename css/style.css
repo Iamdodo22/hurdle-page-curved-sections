@@ -499,7 +499,6 @@ ul li:nth-child(2) {
 }
 
 .footer {
-  display: inline-block;
   position: relative;
   margin-top: 3rem;
   padding-inline: 20%;
@@ -512,6 +511,7 @@ ul li:nth-child(2) {
 .footer-curvy {
   width: 100%;
   position: absolute;
+  padding: 0;
   top: 0;
   left: 0;
   background-color: white;
