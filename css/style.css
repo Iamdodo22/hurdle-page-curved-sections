@@ -510,11 +510,12 @@ ul li:nth-child(2) {
   background: hsl(192, 100%, 9%);
 }
 .footer-curvy {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   background-color: white;
+  object-fit: cover;
 }
 .footer-con {
   display: flex;
